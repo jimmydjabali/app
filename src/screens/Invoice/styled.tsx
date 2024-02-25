@@ -183,8 +183,12 @@ export const AmountText = styled(Text).attrs<AmountTextProps>(
   })
 )<AmountTextProps>``;
 
+export const TipComponentStack = styled(ComponentStack)`
+  overflow-x: auto;
+`;
+
 export const ProgressBar = styled(RootProgressBar)`
-  width: 90%;
+  width: 100%;
 `;
 
 export const ActionButton = styled(Button)`

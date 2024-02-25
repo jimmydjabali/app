@@ -28,8 +28,10 @@ import {
   faArrowLeft,
   faArrowUpRightFromSquare,
   faBolt,
+  faCalculator,
   faCheck,
   faClock,
+  faCoins,
   faHandPointer,
   faPen,
   faQrcode,
@@ -712,6 +714,35 @@ export const Invoice = () => {
                   </ComponentStack>
                 </ComponentStack>
               )}
+              <ComponentStack direction="vertical" gapSize={10}>
+                <ComponentStack direction="horizontal" gapSize={12}>
+                  <Icon icon={faCoins} size={20} color={colors.white} />
+                  <Text h4 weight={600} color={colors.white}>
+                    Tip
+                  </Text>
+                </ComponentStack>
+                <S.TipComponentStack direction="horizontal" gapSize={8}>
+                  <Button title="1 CHF" size="small" type="bitcoin" />
+                  <Button title="2 CHF" size="small" type="bitcoin" />
+                  <Button
+                    title="Couvrir frais (1.5%)"
+                    size="small"
+                    type="bitcoin"
+                  />
+                  <Button
+                    title="Entrer montant"
+                    size="small"
+                    type="bitcoin"
+                    icon={faCalculator}
+                  />
+                </S.TipComponentStack>
+              </ComponentStack>
+              {/* <Button
+                icon={faCoins}
+                title="Add a tip"
+                size="medium"
+                type="bitcoin"
+              /> */}
               {createdAt && delay && isAlive && !isExternalInvoice && (
                 <S.ProgressBar
                   createdAt={createdAt}
